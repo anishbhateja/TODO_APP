@@ -8,7 +8,7 @@
 #container{
 	width: 800px;
 	margin: auto;
-	border:2px solid lightgrey;
+	border:1px solid lightgrey;
 }
 
 /*--------------TITLE----------------*/
@@ -27,8 +27,8 @@
 
 #description-container{
 	width: inherit;
-	margin-top:10px;
-	border:1px solid lightgrey;
+    margin-top: 10px;
+    border-top: 1px solid lightgrey;
 
 }
 
@@ -55,9 +55,11 @@
 #select-container{
     
 	width: 100%;
-	border:1px solid lightgrey;
-	display: flex;
+    border-bottom: 1px solid lightgrey;
+    border-top: 1px solid lightgray;
+    display: flex;
 }
+
 
 /*---------Select-Category-----------*/
 #category-container{
@@ -70,35 +72,45 @@
 
 #category{
 	margin-left: 111px;
-    height: 24px;
-    width: 115px;
+	height: 30px;
+    width: 122px;
 }
 
 /*----------DATE-PICKER-----------------*/
 
 #date-container{
-	margin-top: 10px;
 	font-size: 1rem;
-	font-family: sans-serif;
-	width: 50%;
-	padding: 10px;
-	border-left: 2px solid lightgray;
+    font-family: sans-serif;
+    width: 50%;
+    padding-top: 22px;
+    padding-left: 10px;
+    border-left: 1px solid lightgray;
 	
 }
 
 /*---------BUTTON-CONTAINER--------------*/
 
 #button-container{
-	display: flex;
 	width: 100%;
-	justify-content: center;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	padding: 12px;
+	position: relative;
+	left: 409px;
+	top:25px;
 }
 
-#button-1{
-	margin-left: 10px;
+#delete-button{
+	position: relative;
+    top: -50px;
+    left: 202px;
+}
+
+#type-button{
+	position: relative;
+    left: 85%;
+    top: -44px;
+    width: 100px;
 }
 
 /*------TASK CONTAINER--------------*/
@@ -114,5 +126,17 @@
 	border-top: 1px solid lightgray;
 }
 
+#left-margin{
+	margin-left: 65px;
+	margin-top: 10px;
+}
+
+.defaultCheckbox{
+
+	width: 30px;
+    height: 30px;
+    position: relative;
+    top: 60px;
+}
 
 

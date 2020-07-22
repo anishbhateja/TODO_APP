@@ -18,6 +18,7 @@
        <!-----------INPUT CONTAINER------------->
 
 		   <form action="/create-task" method="POST">
+
 			   	<label for="description"> <h3 id="margin-10px"> DESCRIPTION </h3> </label><br>
 			 	<input type="text" id="description" name="description" placeholder="What do you need to do ?">
            
@@ -51,41 +52,44 @@
 					<button type="submit" id="button-1"class="btn btn-dark btn-lg"> 	
 						<i class="fa fa-plus"></i> ADD TASK
 					</button>
-					<button type="submit" class="btn btn-danger btn-lg">
+
+				</form>
+
+					
+					<!-- <button type="submit" class="btn btn-danger btn-lg">
 						<i class="fa fa-trash-o"></i> DELETE TASK
-					</button>
+					</button> -->
 
 				</div>
-		   </form>
+		  
 
 		   <!---------TASK CONTAINER------>
 
 		   <div id="task-continer">
 
-				   <form action="/delete-task" method="POST">
+				   <form action="/delete-task" method="GET">
+
+					<button type="submit" id="delete-button" class="btn btn-danger btn-lg">
+						<i class="fa fa-trash-o"></i> DELETE TASK
+					</button>
 					
 					<% for (let i of task_list){%>
 
 							<div class="task-box">
-								<input type="checkbox" id="check-task" name="task" value="task">
-								<label for="task"> <h5> <%= i.task %> </h5> </label>
-								<h5> <i class="fa fa-calendar"></i> <%= i.date %> </h5>
+								<input class="defaultCheckbox" type="checkbox" name="<%=i._id%>">
+								<div id="left-margin">
+									<label for="task"> <h5> <%= i.task %> </h5> </label>
+									<h5> <i class="fa fa-calendar"></i> <%= i.date %> </h5>
+								</div>
+								<button type="button" id="type-button" class="btn btn-success"><%= i.nature %> </button>
 							</div>
 					<% } %>
 
+					
 
 
-                     <!-- <div class="task-box">
-						  <input type="checkbox" id="task" name="task" value="task">
-						  <label for="task"> <h5> Why not add a task ? </h5> </label>
-						  <h5> <i class="fa fa-calendar"></i> May 2,2020 </h5>
-					  </div>
 
-					  <div class="task-box">
-						  <input type="checkbox" id="task" name="task" value="task">
-						  <label for="task"> <h5> Take mom for a walk. </h5> </label>
-						  <h5> <i class="fa fa-calendar"></i> May 5,2020 </h5>
-					  </div> -->
+            
 
 
 					 

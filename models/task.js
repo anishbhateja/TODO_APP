@@ -13,9 +13,6 @@ const taskSchema= new mongoose.Schema({
         type:String
     },
 
-    value:{
-        type:Boolean,
-    }
 });
 
 const Task=mongoose.model('Task',taskSchema);
