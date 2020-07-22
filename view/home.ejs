@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TODO APP</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+   <div id="container">
+
+	   <div id="title">
+	   	  <h1>TODO APP</h1>
+	   </div>
+       
+       <div id="description-container">
+
+       <!-----------INPUT CONTAINER------------->
+
+		   <form action="/create-task">
+			   	<label for="description"> <h3 id="margin-10px"> DESCRIPTION </h3> </label><br>
+			 	<input type="text" id="description" name="description" placeholder="What do you need to do ?">
+           
+          <!-------------CATEGORY------------------>
+
+			 	<div id="select-container">
+
+				 		<div id="category-container">
+				 			<h3>CATEGORY</h3>
+					 		<label for="category">Choose a category</label>
+								  <select name="category" id="category">
+									    <option value="Personal">Personal</option>
+									    <option value="Work">Work</option>
+									    <option value="School">School</option>
+									    <option value="Others">Others</option>
+								  </select>
+					    </div>
+
+					    <div id="date-container">
+				 			<h3>DUE DATE</h3>
+				 			<label for="date"></label>
+							<input type="date" id="date" name="date">
+						</div>
+			 		
+				</div>
+
+			<!----------BUTTONS------------>
+
+				<div id="button-container">
+
+					<button type="submit" id="button-1"class="btn btn-dark btn-lg"> 	
+						<i class="fa fa-plus"></i> ADD TASK
+					</button>
+					<button type="submit" class="btn btn-danger btn-lg">
+						<i class="fa fa-trash-o"></i> DELETE TASK
+					</button>
+
+				</div>
+		   </form>
+
+		   <!---------TASK CONTAINER------>
+
+		   <div id="task-continer">
+
+			   	<form action="/delete-task">
+                     <div class="task-box">
+						  <input type="checkbox" id="task" name="task" value="task">
+						  <label for="task"> <h5> Why not add a task ? </h5> </label>
+						  <h5> <i class="fa fa-calendar"></i> May 2,2020 </h5>
+					  </div>
+
+					  <div class="task-box">
+						  <input type="checkbox" id="task" name="task" value="task">
+						  <label for="task"> <h5> Take mom for a walk. </h5> </label>
+						  <h5> <i class="fa fa-calendar"></i> May 5,2020 </h5>
+					  </div>
+
+
+					 
+			    </form>
+		   	
+
+
+
+
+		   </div>
+
+
+	   </div>
+   </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
