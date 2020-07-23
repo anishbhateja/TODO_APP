@@ -1,142 +1,154 @@
-:root{
+:root {
+  --font-color: lightgrey;
+  --font-color-dark: grey;
+}
 
-	--font-color:lightgrey;
-	--font-color-dark:grey;
-	}
+body {
+  background-color: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
 
-
-#container{
-	width: 800px;
-	margin: auto;
-	border:1px solid lightgrey;
+#container {
+  background-color: #fff;
+  width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 /*--------------TITLE----------------*/
-#title{
-	width: 100%;
-	height: 50px;
-	font-size: 1rem;
-	font-family: sans-serif;
-	text-align: center;
-	padding: 10px;
-	margin-top: -5px;
-	
+#title {
+  width: 100%;
+  height: 50px;
+  font-size: 1rem;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 10px;
+  margin-top: -5px;
 }
 
 /*------------FORM-SECTION----------------*/
 
-#description-container{
-	width: inherit;
-    margin-top: 10px;
-    border-top: 1px solid lightgrey;
-
+#description-container {
+  width: inherit;
+  margin-top: 10px;
+  border-top: 1px solid lightgrey;
 }
 
-#description-container form{
-	margin-top:15px;
+#description-container form {
+  margin-top: 15px;
 }
 
-#margin-10px{
-	margin-left: 10px;
-	
+#margin-10px {
+  margin-left: 10px;
+}
+
+#form.success input {
+  border: 2px solid#2ecc71;
 }
 
 /*--------------INPUT-BOX------------------*/
 
-#description{
-	width: 90%;
-    height: 50px;
-    border: none;
-    margin-top: -18px;
-    margin-left: 10px;
+#description {
+  width: 100%;
+  height: 50px;
+  margin-top: -18px;
+  border: 1px solid #f0f0f0;
+  padding-left: 10px;
 }
+
+#description:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.slashed {
+  text-decoration: line-through;
+}
+
 /*---------CATEGORY-CONTAINER---------*/
 
-#select-container{
-    
-	width: 100%;
-    border-bottom: 1px solid lightgrey;
-    border-top: 1px solid lightgray;
-    display: flex;
+#select-container {
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  /* border-top: 1px solid lightgray; */
+  display: flex;
 }
-
 
 /*---------Select-Category-----------*/
-#category-container{
-	width: 50%;
-    margin-top: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-
+#category-container {
+  width: 50%;
+  margin-top: 10px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-#category{
-	margin-left: 111px;
-	height: 30px;
-    width: 122px;
+#category {
+  margin-left: 111px;
+  height: 30px;
+  width: 122px;
 }
 
 /*----------DATE-PICKER-----------------*/
 
-#date-container{
-	font-size: 1rem;
-    font-family: sans-serif;
-    width: 50%;
-    padding-top: 22px;
-    padding-left: 10px;
-    border-left: 1px solid lightgray;
-	
+#date-container {
+  font-size: 1rem;
+  font-family: sans-serif;
+  width: 50%;
+  padding-top: 22px;
+  padding-left: 10px;
+  border-left: 1px solid lightgray;
 }
 
 /*---------BUTTON-CONTAINER--------------*/
 
-#button-container{
-	width: 100%;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	padding: 12px;
-	position: relative;
-	left: 409px;
-	top:25px;
+#button-container {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 12px;
+  position: relative;
+  left: 409px;
+  top: 25px;
 }
 
-#delete-button{
-	position: relative;
-    top: -50px;
-    left: 202px;
+#delete-button {
+  position: relative;
+  top: -50px;
+  left: 202px;
 }
 
-#type-button{
-	position: relative;
-    left: 85%;
-    top: -44px;
-    width: 100px;
+#type-button {
+  position: relative;
+  left: 85%;
+  top: -44px;
+  width: 100px;
 }
 
 /*------TASK CONTAINER--------------*/
 
-#task-container{
-	width: 100%;
-	border: 1px solid lightgray
+#task-container {
+  width: 100%;
+  border: 1px solid lightgray;
 }
 
-.task-box{
-	padding: 10px;
-	width: 100%;
-	border-top: 1px solid lightgray;
+.task-box {
+  padding: 10px;
+  width: 100%;
+  border-top: 1px solid lightgray;
 }
 
-#left-margin{
-	margin-left: 65px;
-	margin-top: 10px;
+#left-margin {
+  margin-left: 65px;
+  margin-top: 10px;
 }
 
-.defaultCheckbox{
-
-	width: 30px;
-    height: 30px;
-    position: relative;
-    top: 60px;
+.defaultCheckbox {
+  width: 38px;
+  height: 21px;
+  position: relative;
+  top: 60px;
 }
-
-
