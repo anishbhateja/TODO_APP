@@ -67,7 +67,7 @@
 
 		   <div id="task-continer">
 
-				   <form action="/delete-task" method="GET">
+				   <form action="/delete-task" method="POST">
 
 					<button type="submit" id="delete-button" class="btn btn-danger btn-lg">
 						<i class="fa fa-trash-o"></i> DELETE TASK
@@ -76,10 +76,10 @@
 					<% for (let i of task_list){%>
 
 							<div class="task-box">
-								<input class="defaultCheckbox" type="checkbox" name="<%=i._id%>">
+								<input class="defaultCheckbox" type="checkbox" name="check" value="<%= i._id%>">
 								<div id="left-margin">
 									<label for="task"> <h5> <%= i.task %> </h5> </label>
-									<h5> <i class="fa fa-calendar"></i> <%= i.date %> </h5>
+									<h5 class="calender"> <i class="fa fa-calendar"></i> <%= i.date %> </h5>
 								</div>
 								<button type="button" id="type-button" class="btn btn-success"><%= i.nature %> </button>
 							</div>

@@ -27,7 +27,7 @@ app.get("/", function (req, res) {
     });
   });
 });
-
+//Creating Task
 app.post("/create-task", function (req, res) {
   Task.create(
     {
@@ -46,21 +46,23 @@ app.post("/create-task", function (req, res) {
   );
 });
 
-app.get("/delete-task", function (req, res) {
-  console.log(req.query);
-  var id = req.query;
+//Deleting Task
+app.post("/delete-task", function (req, res) {
+  var id = req.body.check;
   console.log(id);
 
   // to check the number of tasks to be deleted
-  var count = Object.keys(id).length;
+  var count = id.length;
+
+  // deleting the task from the database by using their individual ids
   for (let i = 0; i < count; i++) {
-    // deleting the task from the database by using their individual ids
-    Task.findByIdAndDelete(Object.keys(id)[i], function (err) {
+    Task.findByIdAndDelete(id[i], function (err) {
       if (err) {
         console.log("error in deleting the task");
       }
     });
   }
+
   return res.redirect("back");
 });
 

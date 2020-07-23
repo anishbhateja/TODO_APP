@@ -65,7 +65,7 @@ body {
   border-color: #777;
 }
 
-.slashed {
+.task-box .slashed {
   text-decoration: line-through;
 }
 
